@@ -41,7 +41,7 @@ class MetasploitModule < Msf::Auxiliary
 			filename = "msf_sslwebsession_"+current_host+".bin"
 			File.delete(filename) if File.exist?(filename)
 			file_local_write(filename, data)
-			print_good("Parsing binary file.......")
+			print_good("Parsing file.......")
 			parse()
 		else
 			if(res && res.code == 404)
